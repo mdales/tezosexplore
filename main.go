@@ -71,6 +71,7 @@ func main() {
 						if typedOp, ok := opContents.(*rpc.OriginationOp); ok {
 							if val, ok := players[typedOp.Source.String()]; ok {
 								fmt.Printf("Operation %d made by %v\n", i, val)
+								fmt.Printf("\t%v\n", typedOp.Script.Storage.String)
 							}
 						}
 					}
